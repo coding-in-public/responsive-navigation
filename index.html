@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#050307">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation</title>
+  <script src="./nav.js" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,600;0,800;1,600;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<nav>
+  <div class="container nav-container">
+    <a href="/" class="logo-link" aria-label="Go to homepage">
+      <svg viewBox="0 0 229 161" class="logo" width="120" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2">
+        <path
+          d="M29.17 82.421c4.003-34.962 33.732-62.157 69.763-62.157 21.047 0 39.944 9.279 52.817 23.964l-.039.022c.343.361.641.685.94 1.027.443.525.877 1.056 1.303 1.592h.008c.265.337.561.717.902 1.16.408.53.788 1.043 1.142 1.536l-.014.001a69.403 69.403 0 0 1 1.953 2.864c.405.634.747 1.192 1.033 1.657l.004-.003a69.94 69.94 0 0 1 6.483 13.895c8.313-5.572 12.656-10.495 11.55-13.947-1.139-3.553-7.885-5.018-18.404-4.604a31.955 31.955 0 0 0-.858-1.576 9.527 9.527 0 0 0-.685-1.029c20.568-.077 34.892 4.541 37.857 13.791 3.148 9.824-7.166 22.842-25.986 35.427-2.834 36.162-33.117 64.668-70.006 64.668-11.228 0-21.844-2.641-31.258-7.334 5.145-13.664 21.098-10.431 67.983-34.016 20.459-10.292 28.647-17.452 31.541-22.172-15.283 9.925-35.78 19.51-59.054 26.968C54.519 141.34 6.329 140.773.597 122.889c-3.221-10.053 6.73-22.526 26.395-35.382a37.974 37.974 0 0 0-.119 1.939c-.03.821-.028 1.608.002 2.331-9.796 6.182-14.118 10.753-12.914 14.509 1.115 3.482 7.616 4.959 17.772 4.627a69.909 69.909 0 0 1-2.895-16.167h.002l-.017-.258a71.154 71.154 0 0 1-.112-3.765c.001-.696.012-1.424.04-2.168.056-1.549.149-2.994.249-4.228l.133-1.49.041-.416h-.004Zm0 0-.001.001-.036.415c-.044.45-.089.95-.133 1.49l-.146 1.647c.075-1.192.181-2.375.315-3.552l.001-.001Z"
+          style="fill:currentColor" />
+        <path
+          d="M34.442 51.095a10.127 10.127 0 0 1-4.596-8.485c0-5.592 4.54-10.132 10.132-10.132 2.837 0 5.403 1.169 7.243 3.05a71.387 71.387 0 0 0-12.779 15.567Z"
+          style="fill:currentColor" />
+        <circle cx="173.267" cy="10.132" r="10.132" style="fill:currentColor" />
+        <circle cx="218.027" cy="100.618" r="10.132" style="fill:currentColor" />
+      </svg>
+    </a>
+    <div class="nav-wrapper">
+      <button class="btn btn--menu" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open mobile nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+          stroke-width="4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+      <ul role="menubar" class="nav-links" id="menu">
+        <li role="none">
+          <a role="menuitem" href="/" class="nav-link btn">Home</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#" class="nav-link btn">About</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#" class="nav-link btn">Donate</a>
+        </li>
+        <li role="none">
+          <a role="menuitem" href="#" class="nav-link btn btn--accent">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header>
+  <img class="header__img" srcset="./assets/spaceLg.jpg 1999w, ./assets/spaceMd.jpg 1000w, ./assets/spaceSm.jpg 500w" src="./assets/space.jpg" alt="View of earth from space" />
+  <div class="container header-container">
+    <h1 class="h1 rise">The Next Frontier</h1>
+    <p class="h3 rise subheading">Explore the universe of tomorrow.</p>
+  </div>
+</header>
+<main>
+  <section class="stars container--sm fade-up" aria-labelledby="stars">
+    <h2 class="h2" id="stars">Look to the Stars</h2>
+    <p class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae eligendi quibusdam dolor illum impedit nisi. Eaque sequi necessitatibus voluptatum porro.</p>
+    <p class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt fugiat commodi numquam? Obcaecati magni perferendis eligendi laudantium cum perspiciatis minus animi ipsa placeat adipisci repellendus, id culpa minima officiis fugiat quidem nisi sint consectetur eius vero velit sunt quas expedita. Ullam unde optio ad voluptas praesentium animi velit quae dicta?</p>
+    <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, temporibus.</p>
+    </section>
+  <section class="container" aria-labelledby="cards">
+    <h2 class="sr-only" id="cards">Reasons to Travel</h2>
+    <div class="card-container">
+      <div class="card fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" class="card__image fade-up" width="192" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <path
+            d="M138.7,175.5l-19.2,52.1a8,8,0,0,1-15,0L85.3,175.5a8.1,8.1,0,0,0-4.8-4.8L28.4,151.5a8,8,0,0,1,0-15l52.1-19.2a8.1,8.1,0,0,0,4.8-4.8l19.2-52.1a8,8,0,0,1,15,0l19.2,52.1a8.1,8.1,0,0,0,4.8,4.8l52.1,19.2a8,8,0,0,1,0,15l-52.1,19.2A8.1,8.1,0,0,0,138.7,175.5Z"
+            fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+          <line x1="176" y1="16" x2="176" y2="64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="16"></line>
+          <line x1="200" y1="40" x2="152" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="16"></line>
+          <line x1="224" y1="72" x2="224" y2="104" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="16"></line>
+          <line x1="240" y1="88" x2="208" y2="88" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="16"></line>
+        </svg>
+        <div>
+          <h3 class="h3">Stars in the Sky</h3>
+          <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati, deserunt optio possimus atque qui!</p>
+        </div>
+      </div>
+      <div class="card fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" class="card__image fade-up" width="192" fill="currentColor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <path d="M88,148a68,68,0,1,1,68,68H76a44,44,0,0,1,0-88,42.5,42.5,0,0,1,14.3,2.4" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+          <path
+            d="M47,138.9A64.1,64.1,0,0,1,9.6,94.4h0A68.3,68.3,0,0,0,24,96,64.1,64.1,0,0,0,88,32a68.3,68.3,0,0,0-1.6-14.4h0A64,64,0,0,1,136,80c0,1,0,2-.1,3"
+            fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+        </svg>
+        <div>
+          <h3 class="h3">Moon Up Above</h3>
+          <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati, deserunt optio possimus atque qui!</p>
+        </div>
+      </div>
+      <div class="card fade-up">
+        <svg xmlns="http://www.w3.org/2000/svg" class="card__image fade-up" width="192" fill="currentcolor" viewBox="0 0 256 256">
+          <rect width="256" height="256" fill="none"></rect>
+          <line x1="92.8" y1="59" x2="85.1" y2="40.5" fill="none" stroke="currentcolor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="43" y1="108.8" x2="24.5" y2="101.1" fill="none" stroke="currentcolor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="213" y1="108.8" x2="231.5" y2="101.1" fill="none" stroke="currentcolor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="163.2" y1="59" x2="170.9" y2="40.5" fill="none" stroke="currentcolor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="16"></line>
+          <line x1="240" y1="160" x2="16" y2="160" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="16"></line>
+          <line x1="208" y1="200" x2="48" y2="200" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="16"></line>
+          <path d="M70.2,160a60,60,0,1,1,115.6,0" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="16"></path>
+        </svg>
+        <div>
+          <h3 class="h3">Ain’t no Sun Allowed</h3>
+          <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati, deserunt optio possimus atque qui!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container--sm moons fade-up" aria-labelledby="moons">
+    <h3 class="h2" id="moons">Space Travel for Everyone</h3>
+    <p class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae eligendi quibusdam dolor illum impedit
+      nisi. Eaque sequi necessitatibus voluptatum porro.</p>
+    <p class="body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt fugiat commodi numquam? Obcaecati
+      magni perferendis eligendi laudantium cum perspiciatis minus animi ipsa placeat adipisci repellendus, id culpa minima
+      officiis fugiat quidem nisi sint consectetur eius vero velit sunt quas expedita. Ullam unde optio ad voluptas
+      praesentium animi velit quae dicta?</p>
+    <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, temporibus.</p>
+  </section>
+</main>
+</body>
+</html>

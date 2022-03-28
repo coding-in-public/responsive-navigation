@@ -64,7 +64,7 @@ nav.active {
   position: absolute;
   z-index: -1;
   top: 3rem;
-  left: 0; 
+  left: 0;
   right: 0;
   background-color: var(--dark);
   padding: 1.5rem;
@@ -107,15 +107,15 @@ li[role="none"],
   text-transform: uppercase;
 }
 
-.btn--menu[aria-expanded="true"]{
-  transform: rotate(180deg);
+.btn--menu[aria-expanded="true"] {
+  transform: rotate(-180deg);
 }
 
 .btn--menu[aria-expanded="true"] + .nav-links {
   transform: translate3d(0, 0, 0);
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .btn--menu {
     display: none;
   }
@@ -129,7 +129,8 @@ li[role="none"],
     inset: 0;
     background-color: transparent;
   }
-  li[role="none"], .nav-link {
+  li[role="none"],
+  .nav-link {
     width: initial;
   }
 }
@@ -266,19 +267,34 @@ header {
   }
 }
 
+.card__image {
+  width: clamp(4rem, 10vw, 8rem);
+}
+
 .fade-up {
   opacity: 0;
-  position: relative;
-  transform: translateY(5rem);
+  transform: translate3d(0, 5rem, 0);
   transition: transform 1s cubic-bezier(0.64, 0.04, 0.26, 0.87),
     opacity 0.8s cubic-bezier(0.64, 0.04, 0.26, 0.87);
 }
 
 .fade-up.faded {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
-.card__image {
-  width: clamp(4rem, 10vw, 8rem);
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

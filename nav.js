@@ -9,22 +9,24 @@ navBtn.addEventListener('click', () => {
   !isExpanded && nav.classList.add('active');
 })
 
-// INTERSECTION OBSERVERS
-const navObserver = new IntersectionObserver((watchEntry) => {
-  !watchEntry[0].isIntersecting ? nav.classList.add('active') : nav.classList.remove('active');
-}, {threshold: 0.85});
+//INTERSECTION OBSERVER
 
-navObserver.observe(document.querySelector('header'));
+const navObs = new IntersectionObserver((entries) => nav.classList.toggle('active', !entries[0].isIntersecting)
+, {threshold: .85})
 
-const fadeUpObserver = new IntersectionObserver((elsToWatch) => {
-  elsToWatch.forEach((el) => {
-    if (el.isIntersecting) {
-      el.target.classList.add('faded');
-      fadeUpObserver.unobserve(el.target);
+navObs.observe(document.querySelector('header'));
+
+const fadeUpObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('faded');
+      fadeUpObserver.unobserve(entry.target)
     }
-  });
-}, {threshold: 0.25});
+  })
+}, {
+  rootMargin: '-15%'
+})
 
-document.querySelectorAll('.fade-up').forEach((item) => {
-  fadeUpObserver.observe(item);
-});
+document.querySelectorAll('.fade-up').forEach(el => {
+  fadeUpObserver.observe(el);
+})

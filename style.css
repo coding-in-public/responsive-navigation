@@ -10,7 +10,7 @@
   --bkg: linear-gradient(to top, #0f0915, #050307);
   --dark: #050307;
   --text: #f9f6fe;
-  --accent: #4233e4;
+  --accent: #5347d7;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
   color: var(--text);
 }
 
-nav {
+.nav-header {
   position: fixed;
   z-index: 10;
   width: 100%;
@@ -30,7 +30,7 @@ nav {
   transition: background-color 800ms cubic-bezier(0.64, 0.04, 0.26, 0.87);
 }
 
-nav.active {
+.nav-header.active {
   background-color: var(--dark);
 }
 
@@ -99,7 +99,7 @@ nav.active {
   transition: transform 0.3s cubic-bezier(0.64, 0.04, 0.26, 0.87);
 }
 
-li[role="none"],
+li,
 .nav-link {
   width: 100%;
   display: block;
@@ -135,7 +135,7 @@ li[role="none"],
   }
 }
 
-main {
+.section-wrapper {
   display: grid;
   gap: clamp(4rem, 1.45454537rem + 11.636364vw, 8rem);
   position: relative;
@@ -178,7 +178,7 @@ h1 {
   border-width: 0;
 }
 
-header {
+.hero {
   min-height: 100vh;
   display: grid;
   place-items: center;

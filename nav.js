@@ -1,5 +1,5 @@
 const navBtn = document.querySelector('#menu-btn');
-const nav = document.querySelector('nav');
+const nav = document.querySelector('.nav-header');
 const navLinks = document.querySelector('.nav-links');
 
 navBtn.addEventListener('click', () => {
@@ -14,7 +14,7 @@ navBtn.addEventListener('click', () => {
 const navObs = new IntersectionObserver((entries) => nav.classList.toggle('active', !entries[0].isIntersecting)
 , {threshold: .85})
 
-navObs.observe(document.querySelector('header'));
+navObs.observe(document.querySelector('.hero'));
 
 const fadeUpObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
